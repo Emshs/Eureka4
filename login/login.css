@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #eef4ff 0%, #f6faff 100%);
+    margin: 0;
+}
+.login-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 360px;
+}
+.login-container h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #555;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3a5bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #2f4de0;
+}
+.separator {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+.separator:not(:empty)::before {
+    margin-right: 10px;
+}
+.separator:not(:empty)::after {
+    margin-left: 10px;
+}
+.separator-text {
+    color: #aaa;
+    font-size: 14px;
+}
