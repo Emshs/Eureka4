@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f3f4f6, #e1e9ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    position: relative; /* 배경 원을 위해 position 설정 */
+    padding: 40px;
+    width: 600px; /* 컨테이너 너비 유지 */
+    text-align: center;
+    z-index: 1; /* signup-container의 z-index를 높여서 원 위에 위치하도록 설정 */
+}
+
+.background-circle {
+    position: absolute; /* 절대 위치로 배경 원 설정 */
+    width: 450px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 50%; /* 원형 설정 */
+    background: rgba(58, 91, 255, 0.82);
+    filter: blur(350px);
+    top: 50%; /* 가운데 정렬을 위해 위치 설정 */
+    left: 50%;
+    transform: translate(-50%, -50%); /* 원의 중앙 정렬 */
+    z-index: 0; /* 다른 요소 뒤에 위치하게 설정 */
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.form-group {
+    display: flex; /* flexbox로 레이아웃 설정 */
+    justify-content: space-between; /* 항목 간격 설정 */
+    margin-bottom: 15px; /* 아래 여백 추가 */
+    position: relative; /* 추가된 위치 설정 */
+    z-index: 1; /* form-group을 원 위에 위치하게 설정 */
+}
+
+.left-column, .right-column {
+    width: 48%; /* 각 열의 너비 설정 (비율 조정 가능) */
+}
+
+input, select {
+    width: 100%; /* 입력 필드와 선택 필드의 너비를 100%로 설정 */
+    padding: 12px; /* 패딩을 늘려 높이 증가 */
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.87); /* 글씨 색상 통일 */
+    background-color: rgba(255, 255, 255, 0.70); /* 필드 배경을 흰색으로 설정 */
+    outline: none;
+    transition: border-color 0.3s;
+    margin-bottom: 10px; /* 아래 여백 추가 */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* 그림자 추가 */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    cursor: pointer; /* 커서 포인터로 변경 */
+}
+
+input:focus, select:focus {
+    border-color: #6b8cff;
+}
+
+/* 버튼 설정 */
+button {
+    padding: 12px;
+    background-color: #4a75f2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* 버튼 너비를 100%로 설정 */
+    margin-top: 20px; /* 버튼 위 여백 추가 */
+}
+
+button:hover {
+    background-color: #365dd6;
+}

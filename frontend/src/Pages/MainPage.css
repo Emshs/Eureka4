@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* 배경이 고정되도록 설정 */
+    position: relative; /* 배경 원의 위치를 위한 상대 위치 설정 */
+    background-color: #FFFFFF; /* 배경을 흰색으로 설정 */
+}
+
+.gradient-circle {
+    position: absolute;
+    border-radius: 50%; /* 원의 반지름을 유지 */
+    background: #3A5BFF; /* 원의 배경 색상 */
+    width: 600px; /* 원의 크기 */
+    height: 600px; /* 원의 크기 */
+    z-index: -1; /* 다른 요소 아래에 위치하도록 설정 */
+}
+
+/* 왼쪽 위 원 */
+.gradient-circle:first-child {
+    top: -250px; /* 화면 위쪽에 위치 */
+    left: -250px; /* 화면 왼쪽에 위치 */
+}
+
+/* 오른쪽 아래 원 */
+.gradient-circle:nth-child(2) {
+    bottom: -250px; /* 화면 아래쪽에 위치 */
+    right: -250px; /* 화면 오른쪽에 위치 */
+}
+
+/* 원의 흐림 효과를 적용하고 중심을 하얗게 만들기 */
+.gradient-circle {
+    filter: blur(300px); /* 흐림 효과 */
+}
+
+.header {
+    width: 100%;
+    background: rgba(217, 217, 217, 0.44);
+    padding: 20px 30px; /* 패딩을 줄여서 높이 조정 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #555;
+}
+
+.header .login {
+    font-size: 25px;
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+.login:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 (if necessary) */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    flex-direction: column; /* 세로 방향으로 정렬 (optional) */
+}
+
+.main-content h2 {
+    width: 702px;
+    height: 178px;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.59);
+    text-align: center;
+    font-family: Inter;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+}
+
+.button-group button {
+    border-radius: 100px;
+    background: rgba(58, 91, 255, 0.95);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    border: none;
+    padding: 12px 106px;
+    font-size: 35px;
+    margin: 0 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.button-group button:hover {
+    background-color: #365dd6;
+}
