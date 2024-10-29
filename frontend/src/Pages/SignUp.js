@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // useNavigate import
 import './SignUp.css';  // CSS 파일 연결
 
 const SignUp = () => {
@@ -16,12 +17,21 @@ const SignUp = () => {
         confirmPassword: '', // 비밀번호 확인 추가
     });
 
+    const navigate = useNavigate(); // useNavigate 훅 사용
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // 비밀번호와 비밀번호 확인이 일치하는지 확인
+        if (formData.password !== formData.confirmPassword) {
+            alert('비밀번호가 일치하지 않습니다.');
+            return;
+        }
+
         try {
             const response = await axios.post('http://localhost:4000/api/signup', {
                 major: formData.major,
@@ -34,7 +44,9 @@ const SignUp = () => {
                 heightWeight: formData.heightWeight,
                 password: formData.password,
             });
+
             alert(response.data.message); // 성공 메시지 표시
+            navigate('/'); // 회원가입 성공 시 메인 페이지로 이동
         } catch (error) {
             alert(error.response.data.message); // 에러 메시지 표시
         }
@@ -94,14 +106,14 @@ const SignUp = () => {
                         <input 
                             type="text" 
                             name="alcoholTolerance" 
-                            placeholder="주량(선택)" 
+                            placeholder="주량 (선택)" 
                             value={formData.alcoholTolerance} 
                             onChange={handleChange} 
                         />
                         <input 
                             type="text" 
                             name="mbti" 
-                            placeholder="MBTI(선택)" 
+                            placeholder="MBTI (선택)" 
                             value={formData.mbti} 
                             onChange={handleChange} 
                         />

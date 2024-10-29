@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Link 컴포넌트 import
 import './MainPage.css';  // CSS 파일 연결
 
 const MainPage = () => {
+  const [studentId, setStudentId] = useState(null);
+
+  // 로그인 정보를 가져오는 함수 (예시로 localStorage 사용)
+  useEffect(() => {
+    const loggedInStudentId = localStorage.getItem('studentId'); // 로그인 시 저장한 학번을 가져옴
+    if (loggedInStudentId) {
+      setStudentId(loggedInStudentId);
+    }
+  }, []);
+
   return (
     <div>
       {/* 원형 그라데이션 추가 */}
@@ -11,7 +21,12 @@ const MainPage = () => {
 
       <div className="header">
         <h1>소K팅</h1>
-        <Link to="/login" className="login">로그인 / 회원가입</Link> {/* Link 사용 */}
+        {/* 로그인 상태에 따라 링크 변경 */}
+        {studentId ? (
+          <span className="login">{studentId}님 환영합니다!</span>
+        ) : (
+          <Link to="/login" className="login">로그인 / 회원가입</Link>
+        )}
       </div>
 
       <div className="main-content">
