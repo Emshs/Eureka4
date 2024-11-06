@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.head {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(217, 217, 217, 0.44);
+}
+
+.head > .leftside {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.head > .rightside {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.element1 {
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 1000;
+    color: rgba(0, 0, 0, 0.70);
+
+    text-decoration: none; /* 밑줄 제거*/
+    color: inherit; /* 링크 기본 색 유지 */
+}
+
+.element2{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(121, 121, 121);
+}
+
+#element3 {
+    width: 80%;
+    height: 60px;
+    background: rgba(58, 91, 255, 0.33);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+
+    margin: 0;
+    padding-left: 60px;
+    font-size: 23px;
+    font-weight: 800;
+
+    background-image: url(../../public/images/search.png);
+    background-size:35px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+#element4 {
+    width: 80px;
+    height: 80px;
+    margin-left: 15px;
+    background-image: url(../../public/images/group.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+#element5 {
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin: 15px;
+    border-radius: 50%;
+    font-size: 1.9em;
+    color: #3A5BFF;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#element6 {
+    width: 360px;
+    height: 36px;
+    color: #000000B2;
+    font-size: 35px;
+    font-weight: 600;
+    padding: 0;  margin: 0;
+    padding-left: 20px;
+}
+
+#element7 {
+    width: 386px;
+    height: 56px;
+    border-radius: 90px;
+    border: 2px solid rgba(0, 0, 0, 0.50);
+    background: #EBEFFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 27px;
+    font-weight: 900;
+}
+
+#element8 {
+    background-image: url(../../public/images/plus-member.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 38px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #FFF;
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+}
+
+#element9 {    
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.9em;
+    color: #3A5BFF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.element10 {
+    width: 250px;
+    height: 45px;
+    border-radius: 30px;
+    background: rgba(58, 91, 255, 0.33);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.element11 {
+    background-image: url(../../public/images/bell.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    padding: 0;  margin: 0;
+}
+
+#element12 {
+    padding-left: 40px;
+}
+
+
+.subhead {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background: #3A5BFF1A;
+}
+
+.subhead > .leftside {
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: solid rgba(0, 0, 0, 0.30);
+    border-bottom: solid rgba(0, 0, 0, 0.30);
+}
+
+.subhead > .rightside {
+    width: 78%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contents {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.contents > .leftside {
+    width: 22%;
+    border-right: solid rgba(0, 0, 0, 0.30);
+}
+
+.contents > .rightside {
+    width: 78%;
+}
+
+.block {
+    border-bottom: solid rgba(0, 0, 0, 0.30);
+    width: 100%;
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#right {
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    display: flex;
+    flex-direction: row;
+}
+
+.lower {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;  margin: 0;
+    padding-top: 100px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: 'rgba(0,0,0,0.5)';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* 모달이 가장 위에 오도록 높은 z-index 설정 */
+}
+
+.modal-contents {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.remove-button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;  margin: 0;
+    margin-right: 10px;
+}
+
+.group-list {
+    margin-top: 20px; /* 그룹 목록과 다른 요소 사이에 여백 추가 */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .group-item {
+    /* background-color: #b7cae3; 배경색 */
+    background: rgba(58, 91, 255, 0.33);
+
+    padding: 10px; /* 패딩 */
+    margin: 10px; /* 각 그룹 항목 사이에 여백 추가 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  #up {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #bottom {
+    width: 100%;
+    height: 100%;
+  }
