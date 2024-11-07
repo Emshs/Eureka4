@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+main {
+    display: flex;
+    height: calc(100% - 60px); /* 화면 높이에서 헤더 높이 제외 */
+    padding: 16px;
+    gap: 16px;
+}
+
+.left-panel, .right-panel {
+    background-color: #fff;
+    padding: 0px;
+    border: 0px solid #ddd;
+    border-radius: 0px;
+    overflow-y: auto;
+}
+
+.left-panel {
+    width: 30%;
+}
+
+.right-panel {
+    width: 70%;
+}
+
+.left-panel h2, .right-panel h2 {
+    background: rgba(58, 91, 255, 0.10); /* 배경색 추가 */
+    padding: 20px; /* 텍스트와 배경 간의 여백을 추가 */
+    border-radius: 0px; /* 모서리를 둥글게 처리 */
+}
+
+.left-panel h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    padding: 20px 195px;
+}
+
+.right-panel h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.profile-info .profile-btn {
+    display: block;
+    width: 80%;
+    padding: 20px;
+    margin: 6px auto;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 90px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    cursor: default;
+    font-size: 20px; /* 글씨 크기 추가 */
+}
+
+.profile-actions .action-btn {
+    display: block;
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 90px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    font-size: 20px; /* 글씨 크기 */
+    font-family: Inter; /* 글씨체 추가 */
+    font-weight: 900; /* 학과(부)와 동일한 글씨 두께 */
+}
+
+.matching-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.matching-info {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.matching-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.matching-actions .accept, .matching-actions .decline {
+    padding: 8px 47px;
+    border: none;
+    border-radius: 90px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    font-size: 27px;
+}
+
+.accept {
+    background-color: #4a90e2;
+}
+
+.decline {
+    background-color: #d9534f;
+}
+
+.matching-note {
+    color: #000;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 15px;
+}
+
+.saved-groups {
+    margin-top: 32px;
+}
+
+.saved-groups h2 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 0px;
+}
+
+.saved-groups h2::before {
+    content: '🔖';
+    margin-right: 8px;
+    font-size: 40px;
+}
+
+.saved-groups .group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0; /* 목록 간의 패딩을 늘려 간격 조정 */
+    margin-bottom: 16px; /* 목록 간의 간격 추가 */
+    border-top: 1px solid #ddd;
+}
+
+.saved-groups .group p {
+    font-size: 25px; /* 글씨 크기 추가 */
+    font-family: Inter; /* 동일한 글씨체 */
+    font-weight: 600; /* 원하는 경우 두께 조정 */
+    color: rgba(0, 0, 0, 0.70); /* 글자색 설정 */
+}
+
+.group-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.match-btn {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.bell-icon {
+    font-size: 24px; /* 아이콘 크기 */
+    margin-right: 8px; /* 텍스트와의 간격 */
+    vertical-align: middle;
+}
