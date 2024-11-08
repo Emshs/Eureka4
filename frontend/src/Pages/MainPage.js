@@ -13,6 +13,24 @@ const MainPage = () => {
     }
   }, []);
 
+  const handleStartClick = () => {
+    if (!studentId) {
+      alert('로그인이 필요합니다!');
+      navigate('/login'); // 로그인 페이지로 이동
+    } else {
+      navigate('/group-setting'); // 로그인 되어 있으면 진행
+    }
+  };
+
+  const handleCheckClick = () => {
+    if (!studentId) {
+      alert('로그인이 필요합니다!');
+      navigate('/login'); // 로그인 페이지로 이동
+    } else {
+      navigate('/group-introducing'); // 로그인 되어 있으면 진행
+    }
+  };
+
   return (
     <div>
       <div className="gradient-circle"></div>
@@ -30,8 +48,8 @@ const MainPage = () => {
       <div className="main-content">
         <h2>국민대에서 만나는<br />당신만의 특별한 누군가</h2>
         <div className="button-group">
-          <button onClick={() => navigate('/group-setting')}>시작하기</button>
-          <button onClick={() => navigate('/group-introducing')}>확인하기</button>
+          <button onClick={handleStartClick}>시작하기</button>
+          <button onClick={handleCheckClick}>확인하기</button>
         </div>
       </div>
     </div>
