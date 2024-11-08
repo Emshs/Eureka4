@@ -4,6 +4,7 @@ import MainPage from './Pages/MainPage';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import GroupSetting from './Pages/GroupSetting';
+import GroupIntroducing from './Pages/Group introducing';
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/group-setting" element={<GroupSetting />} />
+                <Route path="/group-introducing" element={<GroupIntroducing />} />
             </Routes>
         </Router>
     );
