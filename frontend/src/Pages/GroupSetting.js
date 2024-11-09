@@ -1,8 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import './GroupSetting.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const [studentId, setStudentId] = useState(null);
+  const navigate = useNavigate(); // useNavigate 훅을 사용하여 페이지 이동 설정
+
+  useEffect(() => {
+    // localStorage에서 studentId를 가져와 상태에 설정
+    const loggedInStudentId = localStorage.getItem('studentId');
+    if (loggedInStudentId) {
+      setStudentId(loggedInStudentId);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // 로그아웃 시 localStorage에서 studentId 삭제
+    localStorage.removeItem('studentId');
+    navigate('/'); // 메인 페이지로 이동
+  };
+
   return (
     <div className='head'>
       <div className='leftside'>
@@ -10,7 +27,7 @@ const Header = () => {
       </div>
       <div className='rightside'>
         <div className='element11'></div>
-        <div className='element2'>로그아웃</div>
+        <div className='element2' onClick={handleLogout}>로그아웃</div>
         <div className='element2'>20240000님</div>
       </div>
     </div>
@@ -240,7 +257,6 @@ const handleCreateGroup = async () => {
     </div>
   );
 }
-
 
 const GroupSetting = () => {
   return (
