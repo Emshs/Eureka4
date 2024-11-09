@@ -26,7 +26,7 @@ const Header = () => {
         <Link to="/" className='element1'>소K팅</Link>
       </div>
       <div className='rightside'>
-        <div className='element11'></div>
+        <div className='element11' onClick={navigate('/group-introducing')}></div>
         <div className='element2' onClick={handleLogout}>로그아웃</div>
         <div className='element2'>{studentId ? `${studentId}님` : '--------님'}</div>
       </div>
