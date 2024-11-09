@@ -28,7 +28,7 @@ const Header = () => {
       <div className='rightside'>
         <div className='element11'></div>
         <div className='element2' onClick={handleLogout}>로그아웃</div>
-        <div className='element2'>20240000님</div>
+        <div className='element2'>{studentId ? `${studentId}님` : '--------님'}</div>
       </div>
     </div>
   );
